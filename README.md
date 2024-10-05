@@ -1,4 +1,4 @@
-# QZIP2 Compressor
+# qzip3 Compressor
 
 A minimalistic implementation of [FrodoKEM](https://frodokem.org/) lattice encryption layer over a slightly improved Bzip2 compression. Inspired by https://github.com/microsoft/PQCrypto-LWEKE.
 
@@ -8,10 +8,10 @@ A single file/folder (de)compression / (de)encryption is supported.
 
 ```bash
 # compression 
-qzip2 -c inputFile|inputFolder [-p password] -o outputFile
+qzip3 -c inputFile|inputFolder [-p password] -o outputFile
 
 # decompression
-qzip2 -d achiveFile [-p password]
+qzip3 -d achiveFile [-p password]
 ```
 
 ## Examples
@@ -20,10 +20,10 @@ qzip2 -d achiveFile [-p password]
 
 ```bash
 # compress the file and encrypt 
-qzip2 -c file.txt -p test -o file.qzip2
+qzip3 -c file.txt -p test -o file.qzip3
 
 # decrypt and decompress
-qzip2 -d file.qzip2 -p test
+qzip3 -d file.qzip3 -p test
 ```
 
 ### Without encryption
@@ -32,11 +32,11 @@ Without encryption, a modified Burrows–Wheeler transform is used which can imp
 
 ```bash
 # compress
-qzip2 -c file -o file.qzip2
+qzip3 -c file -o file.qzip3
 
 
 # decompress
-qzip2 -d file.qzip2
+qzip3 -d file.qzip3
 ```
 
 **Note**
@@ -47,7 +47,7 @@ Decompression is done to the folder where the archive file is located. Not to mi
 
 # The extracted files will be placed in mydir
 
-qzip2 -d mydir/file.qzip2 
+qzip3 -d mydir/file.qzip3 
 ```
 
 
